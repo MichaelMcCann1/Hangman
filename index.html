@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hangman</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Chilanka&display=swap" rel="stylesheet">
+  <script src='app.js' defer></script>
+</head>
+<body>
+  <div class="game">
+    <div class="nuce">
+      <div class="gallows">
+        <div class="frame">
+          <div class="bottom"></div>
+          <div class="post"></div>
+          <div class="top"></div>
+          <div class="down"></div>
+          <div class="angle"></div>
+        </div>
+        <div class="person">
+          <div class="head"></div>
+          <div class="torso"></div>
+          <div class="leftArm"></div>
+          <div class="rightArm"></div>
+          <div class="leftLeg"></div>
+          <div class="rightLeg"></div>
+        </div> 
+      </div>
+    </div>
+    <div class="word">
+      <span class="guess"></span>
+    </div>
+    <div class="letters">
+        <p id="A">A</p>
+        <p id="B">B</p>
+        <p id="C">C</p>
+        <p id="D">D</p>
+        <p id="E">E</p>
+        <p id="F">F</p>
+        <p id="G">G</p>
+        <p id="H">H</p>
+        <p id="I">I</p>
+        <p id="J">J</p>
+        <p id="K">K</p>
+        <p id="L">L</p>
+        <p id="M">M</p>
+        <p id="N">N</p>
+        <p id="O">O</p>
+        <p id="P">P</p>
+        <p id="Q">Q</p>
+        <p id="R">R</p>
+        <p id="S">S</p>
+        <p id="T">T</p>
+        <p id="U">U</p>
+        <p id="V">V</p>
+        <p id="W">W</p>
+        <p id="X">X</p>
+        <p id="Y">Y</p>
+        <p id="Z">Z</p>
+    </div>
+  </div>
+  <div class='grayScreen'></div>
+  <div class="winner">
+    <h1>YOU WIN!</h1>
+    <button class="playAgainWin">Play Again</button>
+  </div>
+  <div class="loser">
+    <h1>YOU LOSE...</h1>
+    <h2>THE ANSWER WAS<br><span class="result"></span>
+    </h2>
+    <button class="playAgainLose">Play Again</button>
+  </div>
+</body>
+</html>

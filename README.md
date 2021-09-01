@@ -4,7 +4,7 @@ The classic game of Hangman. Try to solve the puzzle by guessing the correct let
 
 This game was made with vanilla JavaScript and has a responsive design to fit any screen.
 
-<img src="https://github.com/MichaelMcCann1/Hangman/blob/refactor/hangmanScreenshot.png" height="300px">
+<img src="https://github.com/MichaelMcCann1/Hangman/blob/main/hangmanScreenshot.png" height="300px">
 
 
 ## Code Explination

@@ -11,6 +11,23 @@
   font-family: 'Chilanka', cursive;
 }
 
+.githubLink {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.githubLink > img {
+  opacity: 0.3;
+  width: 30px;
+  height: 30px;
+  transition: all .5s ease;
+}
+
+.githubLink:hover > img {
+  opacity: 1;
+}
+
 body {
   height: 100vh;
   display: grid;
@@ -251,7 +268,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
   }
 
   .gallows {

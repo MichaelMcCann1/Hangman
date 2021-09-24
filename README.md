@@ -1,5 +1,7 @@
 # Hangman
 
+**Live Link to Project: https://mm-hangman.web.app/**
+
 The classic game of Hangman. Try to solve the puzzle by guessing the correct letters. If you guess too many incorrect letters you lose!
 
 This game was made with vanilla JavaScript and has a responsive design to fit any screen.

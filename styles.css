@@ -29,7 +29,7 @@
 }
 
 body {
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   display: grid;
   place-content: center;
   background: rgb(175, 255, 175);
@@ -38,7 +38,7 @@ body {
 .game {
   width: 90vw;
   max-width: 1200px;
-  height: 80vh;
+  height: calc(var(--vh, 1vh) * 80);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -168,7 +168,7 @@ body {
 .word {
   display: grid;
   place-content: center;
-  font-size: 60px;
+  font-size: 3.5rem;
 }
 
 
@@ -188,6 +188,7 @@ body {
 .letters > div {
   width: 100%;
   aspect-ratio: 1;
+  min-height: 57px;
   background: rgb(120, 220, 250);
   border: 3px solid black;
   border-radius: 15px;
@@ -307,7 +308,7 @@ body {
 
 
   .word {
-    margin: 1em 0
+    margin: 1em 0;
   }
 
   .letters {
@@ -315,7 +316,6 @@ body {
     width: 95%;
     margin: 0 auto
   }
-
 
   .winner, .loser {
     width: 400px;
@@ -354,7 +354,8 @@ body {
   }
 
   .word {
-    margin: .5em 0
+    margin: .5em 0;
+    font-size: 2.5rem;
   }
 
   .letters {
@@ -363,7 +364,7 @@ body {
 
   .letters > div {
     width: 100%;
-    aspect-ratio: 1;
+    min-height: 40px;
     max-height: 60px;
     border: 2px solid black;
     border-radius: 10px;
@@ -401,5 +402,74 @@ body {
   .loser span {
     padding-top: .5em;
     font-size: 25px;
+  }
+
+  .gallows {
+    width: 150px;
+    height: 200px;
+  }
+  .top {
+    width: 70px;    
+    left: 30px;
+    height: 5px;
+  }
+  .down {
+    height: 30px;
+    left: 100px;
+    width: 5px;
+  }
+  .angle {
+    height: 40px;
+    left: 45px;
+    top: -4px;
+    width: 5px;
+  }
+  .post {
+    width: 5px;
+    height: 100%;
+  }
+  .bottom {
+    height: 5px;
+  }
+
+  .person {
+    top: 30px;
+    left: 13px;
+  }
+  .head {
+    width: 30px;
+    height: 30px;
+    border: 3px solid black;
+  }
+  .torso {
+    height: 80px;
+    left: 88px;
+    top: 30px;
+    width: 3px;
+  }
+  .leftArm {
+    width: 3px;
+    height: 30px;
+    left: 76px;
+    top: 40px;
+  
+  }
+  .rightArm {
+    width: 3px;
+    height: 30px;
+    left: 100px;
+    top: 40px;
+  }
+  .leftLeg {
+    width: 3px;
+    height: 30px;
+    left: 77px;
+    top: 105px;
+  }
+  .rightLeg {
+    width: 3px;
+    height: 30px;
+    left: 99px;
+    top: 105px;
   }
 }

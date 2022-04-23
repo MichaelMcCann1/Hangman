@@ -1,8 +1,8 @@
 // Selectors
 const wordList = ['computer','book','fishing','basement','control','insulate','package','customer','outside','electrical','result','rubber','register','dryer','mirror','calculator','binder','purse'];
 const correctLettersSelector = document.querySelector('.correctLetters');
-let lettersSelector = document.querySelectorAll('.letters > div');
-let grayScreenSelector = document.querySelector('.grayScreen')
+const lettersSelector = document.querySelectorAll('.letters > div');
+const grayScreenSelector = document.querySelector('.grayScreen')
 
 // Global Variables
 let currentWord
@@ -19,28 +19,26 @@ lettersSelector.forEach((letter) => {
 
 function resetGame(){
   currentWord = wordList[Math.floor(Math.random() * Math.floor(wordList.length))].toUpperCase();
-  console.log(currentWord)
   strikes = 0;
   correctLetters = '_'.repeat(currentWord.length); 
   correctLettersSelector.textContent = correctLetters;
 }
 
 function checkLetters(item, letter){
-  if (!item.classList.contains('clicked')) {
-    item.classList.add('clicked');
-    if (currentWord.includes(letter)) {
-      for (let i=0; i<currentWord.length; i++) {
-        if (currentWord[i] === letter) {
-          beforeLetter = correctLetters.substring(0,i);
-          afterLetter = correctLetters.substring(i+1);
-          correctLetters = beforeLetter + letter + afterLetter;
-        }  
-      }
-      correctLettersSelector.textContent = correctLetters;
-      checkWin()
-    } else {
-      addBodyPart()
+  if (item.classList.contains('clicked')) return
+  item.classList.add('clicked');
+  if (currentWord.includes(letter)) {
+    for (let i=0; i<currentWord.length; i++) {
+      if (currentWord[i] === letter) {
+        beforeLetter = correctLetters.substring(0,i);
+        afterLetter = correctLetters.substring(i+1);
+        correctLetters = beforeLetter + letter + afterLetter;
+      }  
     }
+    correctLettersSelector.textContent = correctLetters;
+    checkWin()
+  } else {
+    addBodyPart()
   }
 }
 
@@ -96,7 +94,7 @@ function clearGame(){
   document.querySelector('.winner').style.display = 'none';
   document.querySelector('.loser').style.display = 'none';
 
-  let bodyPartsSelector = document.querySelectorAll('.frame, .person > div');
+  const bodyPartsSelector = document.querySelectorAll('.frame, .person > div');
   bodyPartsSelector.forEach(item => item.style.display = 'none');
   lettersSelector.forEach(item => item.classList.remove('clicked'));
 
